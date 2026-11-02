@@ -1,0 +1,74 @@
+/* Daftar invoice dan dokumen penagihan. */
+.table-scroll { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; text-align: left; }
+.invoice-table { white-space: nowrap; }
+.invoice-table th { font-weight: 500; font-size: 12px; color: #989da6; background: #fbfbfc; border-block: 1px solid var(--line); padding: 13px 13px; }
+.invoice-table th:first-child, .invoice-table td:first-child { padding-left: 24px; }
+.invoice-table th:last-child, .invoice-table td:last-child { padding-right: 20px; }
+.invoice-table td { border-bottom: 1px solid #eff0f3; padding: 18px 13px; font-size: 12px; }
+.invoice-table tbody tr:hover { background: #fcfcfd; }
+.invoice-link { font-weight: 550; color: #464c58; }
+.invoice-link:hover { color: #345bd6; }
+.customer-cell { max-width: 210px; overflow: hidden; text-overflow: ellipsis; }
+.invoice-table td .money { font-weight: 550; }
+.overdue { color: #a5633d !important; }
+td.overdue small { display: block; font-size: 12px; margin-top: 2px; }
+.badge { display: inline-flex; gap: 5px; align-items: center; font-size: 12px; font-weight: 500; line-height: 1; white-space: nowrap; border: 1px solid transparent; border-radius: 4px; padding: 6px 7px; }
+.badge > span { width: 4px; height: 4px; background: currentColor; border-radius: 50%; }
+.badge-paid { color: #428064; background: #f0f7f3; border-color: #e3efe8; }
+.badge-unpaid { color: #a37d3e; background: #fcf8ef; border-color: #f2e9d7; }
+.badge-draft { color: #838894; background: #f4f5f7; border-color: #e9eaee; }
+.row-actions { display: flex; align-items: center; justify-content: flex-end; gap: 1px; }
+.empty-state { text-align: center; padding: 65px 24px 72px; max-width: 490px; margin: auto; }
+.empty-icon { display: grid; place-items: center; margin: 0 auto 19px; width: 49px; height: 49px; border: 1px solid var(--line); border-radius: 10px; color: #7d879a; }
+.empty-icon .icon { width: 23px; height: 23px; }
+.empty-state h3 { font-size: 15px; font-weight: 550; letter-spacing: -.3px; }
+.empty-state p { color: #9398a2; font-size: 12px; margin: 9px auto 22px; max-width: 320px; line-height: 1.9; }
+.empty-state .button { font-size: 12px; }
+.list-summary { display: flex; align-items: center; justify-content: space-between; padding: 16px 24px; font-size: 12px; color: #969ba5; gap: 12px; }
+.pagination-bar { display: flex; align-items: center; justify-content: space-between; padding: 17px 24px; gap: 15px; font-size: 12px; color: #969ba5; flex-wrap: wrap; }
+.pagination { display: flex; align-items: center; gap: 13px; }
+.pagination .button { min-height: 32px; padding: 6px 10px; font-size: 12px; }
+.detail-status-bar { display: flex; align-items: center; justify-content: space-between; gap: 15px; margin: 0 auto 23px; max-width: 930px; }
+.detail-status-bar > div { display: flex; align-items: center; gap: 12px; font-size: 12px; }
+.status-form { display: flex; align-items: center; gap: 9px; }
+.status-form label { margin: 0; font-size: 12px; }
+.status-form select { width: auto; min-height: 34px; padding-block: 7px; font-size: 12px; }
+.status-form .button { min-height: 34px; font-size: 12px; }
+.invoice-document { background: #fff; border: 1px solid var(--line); border-radius: 7px; padding: 55px 53px 30px; max-width: 930px; margin: auto; color: #343943; }
+.document-header { display: flex; align-items: flex-start; justify-content: space-between; gap: 35px; padding-bottom: 34px; border-bottom: 2px solid #252932; }
+.document-kicker { font-size: 12px; letter-spacing: 1.4px; color: #9399a4; margin-bottom: 7px; }
+.document-header h2 { font-size: 39px; font-weight: 600; letter-spacing: -1.7px; line-height: 1.2; }
+.document-header h2 > span { color: #345bd6; }
+.document-number { color: #888f9a; font-size: 12px; margin-top: 10px; }
+.document-sender { max-width: 42%; text-align: right; }
+.document-sender h3 { font-size: 14px; margin-bottom: 8px; overflow-wrap: anywhere; }
+.document-sender > p { font-size: 12px; color: #8a919c; line-height: 1.9; }
+.preserve-lines { white-space: pre-line; overflow-wrap: anywhere; }
+.document-info { display: grid; grid-template-columns: 1fr 1fr; gap: 35px; margin: 35px 0 40px; }
+.document-label { color: #9b9faa; font-size: 12px; font-weight: 550; letter-spacing: 1.2px; margin-bottom: 10px; }
+.document-info h3 { font-size: 13px; margin-bottom: 7px; overflow-wrap: anywhere; }
+.document-info .preserve-lines { color: #8a919c; font-size: 12px; line-height: 1.9; }
+.document-metadata { margin: 0; font-size: 12px; padding-top: 1px; }
+.document-metadata > div { display: flex; align-items: flex-start; justify-content: space-between; gap: 15px; margin-bottom: 10px; }
+.document-metadata dt { color: #9298a3; }
+.document-metadata dd { margin: 0; font-weight: 500; text-align: right; }
+.document-table th { font-size: 12px; font-weight: 500; border-bottom: 1px solid #d9dce2; padding: 12px 6px; color: #9298a3; }
+.document-table td { font-size: 12px; padding: 19px 6px; border-bottom: 1px solid #edeef1; vertical-align: top; }
+.document-table th:first-child, .document-table td:first-child { padding-left: 0; width: 32px; color: #9399a4; }
+.document-table th:last-child, .document-table td:last-child { padding-right: 0; }
+.document-table td:nth-child(2) { overflow-wrap: anywhere; }
+.document-totals { width: 48%; margin: 27px 0 35px auto; font-size: 12px; }
+.document-totals > div { display: flex; justify-content: space-between; gap: 15px; padding: 7px 0; }
+.document-totals > div > span:first-child { color: #9298a3; }
+.document-totals .document-grand-total { border-top: 1px solid #dadde3; border-bottom: 2px solid #30353d; padding: 16px 0; margin-top: 10px; align-items: center; }
+.document-grand-total > .money { font-size: 19px; font-weight: 600; letter-spacing: -.5px; }
+.document-notes { padding-top: 8px; margin-bottom: 45px; }
+.document-notes > .preserve-lines { font-size: 12px; color: #828995; line-height: 1.9; }
+.document-footer { border-top: 1px solid #edeef1; padding-top: 19px; display: flex; justify-content: space-between; gap: 20px; font-size: 12px; color: #a3a8b1; }
+.document-footer strong { color: #727986; font-weight: 550; }
+.print-hint { display: flex; align-items: center; justify-content: center; gap: 8px; font-size: 12px; color: #9299a5; margin-top: 24px; }
+.print-hint .icon { width: 14px; height: 14px; }
+@media (max-width: 1100px) { .invoice-document { padding: 38px 30px 25px; } .document-totals { width: 57%; } .detail-status-bar { flex-wrap: wrap; } }
+@media (max-width: 760px) { .invoice-table th:first-child, .invoice-table td:first-child { padding-left: 18px; } .invoice-document { padding: 28px 21px 21px; } .document-header { gap: 20px; } .document-header h2 { font-size: 31px; } .document-sender h3 { font-size: 12px; } .document-sender > p { font-size: 12px; } .document-info { gap: 24px; } .status-form { flex-wrap: wrap; } .document-totals { width: 65%; } .document-grand-total > .money { font-size: 17px; } .print-hint { align-items: flex-start; font-size: 12px; } }
+@media screen and (max-width: 520px) { .document-info { grid-template-columns: 1fr; margin: 25px 0; } .document-sender { max-width: 48%; } .document-table-wrap { overflow-x: auto; } .document-table { min-width: 460px; } .document-totals { width: 100%; margin-block: 22px; } .document-footer { flex-wrap: wrap; font-size: 12px; gap: 7px; } .status-form label { flex-basis: 100%; } .detail-status-bar { margin-top: -4px; } .list-summary { font-size: 12px; padding-inline: 18px; } .pagination-bar { padding-inline: 18px; } }
