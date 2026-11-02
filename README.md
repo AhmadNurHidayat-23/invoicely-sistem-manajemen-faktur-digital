@@ -1,4 +1,4 @@
-# Invoicely — Sistem Informasi Manajemen Invoice dan Penagihan Digital
+# Invoicely — Sistem Informasi Manajemen Faktur dan Penagihan Digital
 
 Invoicely adalah aplikasi web untuk membuat, mengelola, dan mencetak invoice. Sistem ini membantu menyatukan pencatatan tagihan, mengurangi kesalahan perhitungan manual, serta memantau status pembayaran dalam satu ruang kerja berbahasa Indonesia.
 
@@ -25,8 +25,8 @@ Nilai uang menggunakan bilangan bulat Rupiah, sedangkan pajak disimpan dalam bas
 Siapkan **PHP 8.5 (64 bit)** dengan ekstensi SQLite, **Composer 2**, **Node.js 22.12+**, dan npm.
 
 ```bash
-git clone https://github.com/AhmadNurHidayat-23/invoicely-digital-invoice-management-system.git
-cd invoicely-digital-invoice-management-system
+git clone https://github.com/AhmadNurHidayat-23/invoicely-sistem-manajemen-faktur-digital.git
+cd invoicely-sistem-manajemen-faktur-digital
 composer install
 cp .env.example .env
 php artisan key:generate
